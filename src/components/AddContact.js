@@ -1,8 +1,7 @@
 import React from "react";
 
 class AddContact extends React.Component {
-  state = { name: "",  email: "",   phone: "" };
-
+  state = { name: "", email: "", phone: "" };
   add = (e) => {
     e.preventDefault();
     if (this.state.name === "" || this.state.email === "" || this.state.phone === "") {
@@ -10,7 +9,7 @@ class AddContact extends React.Component {
       return;
     }
     this.props.addContactHandler(this.state);
-    this.setState({ name: "", email: "" , phone: ""});
+    this.setState({ name: "", email: "", phone: "" });
   };
   render() {
     return (
